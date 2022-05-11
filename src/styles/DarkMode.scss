@@ -1,0 +1,222 @@
+@import "./colors";
+
+[data-theme="dark"]{
+
+  div{
+    color:white !important;
+  }
+
+  .mainPageContainer{
+    ion-card{
+      background-color: $satrexDarkerBlueDarkMode !important;
+      box-shadow: none !important;
+      ion-card-content{
+        border-radius:30px;
+        border:solid 1px #2a263d;
+      }
+    }
+  }
+
+  ion-content {
+    --background: #08021c !important;
+  }
+  ion-app {
+    background-color: $satrexSemiDarkerBlueDarkMode !important;
+  }
+
+    span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  div,
+  th, td,
+  button, .mbsc-button,
+  label, ion-button::part(native), ion-select::part(text) {
+    color:$satrexSemiGray ;
+  }
+
+  .alert-radio-inner{
+    top:5px;
+  }
+  .sc-ion-alert-md{
+    color:$satrexSemiGray !important;
+    border:{
+      top:$satrexBorderDarkColor;
+      bottom:$satrexBorderDarkColor;
+    }
+  }
+
+  .swiper-slide{
+    background-color: $satrexDarkerBlueDarkMode !important;
+  }
+
+  .section,ion-list,ion-item::part(native),.favoritMarketRow::part(native),.rstra-content-container,.loading-wrapper{
+    background-color: $satrexDarkerBlueDarkMode !important;
+    border-color:$satrexCardGray !important
+  }
+  ion-menu{
+    ion-list,ion-item,ion-content::part(background){
+      background-color: $satrexDarkerBlueDarkMode !important;
+      border-color:$satrexCardGray !important
+    }
+  }
+
+
+
+  ion-searchbar{
+    input{
+      background-color: $satrexDarkerBlueDarkMode !important;
+    }
+  }
+
+  .satrexHr{
+    border-top-color: $satrexBorderDarkColor;
+  }
+
+  .card-content-md{
+    background-color: $satrexDarkerBlueDarkMode !important;
+  }
+
+  ion-tab-button{
+    background-color: #040210 !important;
+  }
+
+  .satrexInput,.satrexTextArea,.MuiDropzoneArea-root{
+    background-color: $satrexSemiDarkerBlueDarkMode !important;
+    border-color:$satrexBorderDarkColor;
+  }
+
+  .selectedTransparentButton::part(native) {
+    background: $satrexSemiDarkerBlueDarkMode;
+  }
+
+  .bankSection{
+    background-color: $satrexSemiDarkerBlueDarkMode;
+  }
+
+  tbody{
+    tr{
+      td{
+        color:white !important;
+      }
+      &:nth-of-type(odd){
+        background-color: $satrexSemiDarkerBlueDarkMode;
+      }
+    }
+  }
+
+  .MuiDropzoneArea-icon{
+    color:$satrexBorderDarkColor;
+  }
+
+  .bankAccountRow{
+    background-color: $satrexDarkerBlueDarkMode !important;
+  }
+
+  .fadeGradientBtn {
+    &:hover {
+      background-image: linear-gradient(transparent, #3e5d5b);
+    }
+  }
+
+  .bankLogoDiv{
+    background-color: $satrexSemiDarkerBlueDarkMode;
+  }
+
+  .bankInfoButtonsDiv{
+    border:{
+      bottom:1px solid $satrexBorderDarkColor;
+      top:1px solid $satrexBorderDarkColor;
+    }
+  }
+
+  .persian-datepicker-caption{
+    border-bottom-color: $satrexBorderDarkColor !important;
+  }
+  .persian-datepicker-sheet-footer{
+    border-top-color: $satrexBorderDarkColor !important;
+  }
+
+  .picker-wrapper,.react-modal-sheet-header,.react-modal-sheet-content,.action-sheet-group,.alert-wrapper{
+    background-color: $satrexBgGray;
+  }
+
+  .rmc-column-item-content{
+    transition: 0.1s;
+  }
+  .rmc-picker-item-selected{
+    div{
+      color: $satrexGreen;
+    }
+  }
+
+  input{
+    color:white !important;
+    &::placeholder{
+      color:white !important;
+    }
+  }
+
+  .persian-datepicker-column-item-content{
+    color: #8a8a8a;
+  }
+  .rmc-picker-mask{
+
+  background-image: linear-gradient(to bottom, $satrexBgGray, transparent), linear-gradient(to top, $satrexBgGray, transparent);
+  }
+
+  .satrexTextDiv{
+    img{
+      opacity:0.05
+    }
+  }
+  //.introSlider{
+  //  .swiper-container{
+  //    background-color:$satrexDarkerBlueDarkMode;
+  //  }
+  //}
+  .RSPBstep{
+    .stepDiv{
+      background-color:$satrexDarkerBlueDarkMode
+    }
+  }
+  .MuiPopover-paper{
+    background-color:$satrexSemiDarkerBlueDarkMode;
+    span{
+      color:white
+    }
+  }
+
+  .section{
+    span:first-child{
+      color: white !important
+    }
+  }
+  .homeToolbar{
+     svg,ion-icon{
+       color:white !important;
+     }
+  }
+
+  .Toastify__toast--error{
+    background-color: rgb(154, 4, 4) !important
+  }
+
+  .Toastify__toast--success{
+    background-color: #117811 !important
+  }
+
+  .menuItemDivider{
+    border-top: 1px solid #3f3f419e;
+    width: 92%;
+  }
+
+  .MuiDialog-paper{
+    background-color:$satrexSemiDarkerBlueDarkMode
+  }
+}

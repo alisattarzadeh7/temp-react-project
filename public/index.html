@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Satrex PWA</title>
+    <base href="/" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-control: max-age=0" content="public">
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+<!--    <link rel="manifest" href="%PUBLIC_URL%/manifest.webmanifest" />-->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="shortcut icon" type="image/png" href="%PUBLIC_URL%/icon-192x192.png" />
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Ionic App" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
+
+  <body id="body">
+    <div id="root"></div>
+  </body>
+  <script>
+
+    self.caches.delete('workbox-precache-v2-https://pwa.narwhal.ir/')
+    self.caches.delete('workbox-precache-v2-https://pwa.satrex.ir/')
+    function success() {
+      document.getElementsByName("status")[0].value = 1;
+      document.getElementById('form').submit()
+    }
+
+    function fail() {
+      document.getElementsByName("status")[0].value = 2;
+      document.getElementById('form').submit()
+    }
+
+
+
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      setTimeout(function(){
+        let deferredPrompt;
+        const addBtn = document.querySelector('.installPwa');
+        const addToHome = document.querySelector('.installPwaAlert');
+        if(addBtn.style){
+          addBtn.style.display = 'none';
+          addToHome.style.display = 'none';
+
+
+          // console.log('get here!!')
+          // Prevent Chrome 67 and earlier from automatically showing the prompt
+          e.preventDefault();
+          // Stash the event so it can be triggered later.
+          deferredPrompt = e;
+          // Update UI to notify the user they can add to home screen
+          addBtn.style.display = 'inherit';
+          addToHome.style.display = 'inherit';
+          addBtn.addEventListener('click', (e) => {
+            // hide our user interface that shows our A2HS button
+            addBtn.style.display = 'none';
+            addToHome.style.display = 'none';
+            // Show the prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the A2HS prompt');
+              } else {
+                console.log('User dismissed the A2HS prompt');
+              }
+              deferredPrompt = null;
+            });
+          });
+        }
+
+
+      },1000)
+    });
+
+  </script>
+</html>

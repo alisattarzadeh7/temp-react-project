@@ -1,0 +1,99 @@
+@import "./colors";
+.rtlApp{
+
+  .satrexTabPanel{
+    direction: ltr;
+  }
+
+  .selectArrow{
+    top: 37px;
+    left:14px;
+  }
+
+  .emailInput{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .stepDiv{
+    .title {
+      transform: rotate(180deg);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      transform: rotate(180deg);
+      direction:rtl;
+    }
+  }
+
+  .MuiAlert-icon {
+    margin-right: 0px !important;
+    margin-left: 12px !important;
+  }
+
+  .emailBtn{
+    margin-top:24.5px;
+    &::part(native){
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+
+  .row{
+    flex-direction: row;
+  }
+  .swiper-slide{
+    padding-left:17px;
+  }
+  .personalInfoDatePickerBtn {
+    cursor: pointer;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 31px;
+    left: 32px;
+  }
+
+  direction:rtl;
+  .MuiMenu-paper{
+    right:initial !important;
+    left:0 !important;
+  }
+  .homeCircle {
+    position: fixed;
+    top: -100px;
+    left: 100px;
+    z-index: 1;
+    border-radius: 64vh;
+    width: 64vh;
+    height: 64vh;
+    background-image: radial-gradient(#2b8f9e 5%, #2b8f9e 20%, #0a1940 70%);
+  }
+  ion-tab-bar {
+    position: absolute;
+    width: 100%;
+    min-height: 67px;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 20;
+    background-color: transparent;
+    padding-bottom: 15px;
+    border: none;
+
+    #tab-button-setting {
+      border-top-right-radius: 35px;
+      border-bottom-right-radius: 35px;
+    }
+
+    #tab-button-profile {
+      border-top-left-radius: 35px;
+      border-bottom-left-radius: 35px;
+    }
+  }
+  input{
+    &::placeholder {
+      text-align: right;
+    }
+  }
+
+}

@@ -1,0 +1,184 @@
+@import "./colors";
+
+@font-face {
+  font-family: HelveticaLt;
+  src: url("../fonts/Font-EN/HelveticaLt.ttf") format("truetype");
+}
+
+
+.ltrApp {
+
+
+  .emailInput{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .shebaInput{
+    position: relative;
+    left: -66px;
+  }
+
+
+  .stepDiv{
+    .title {
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      direction:ltr;
+    }
+  }
+
+  .MuiAlert-icon {
+    margin-right: 12px !important;
+    margin-left: 0px !important;
+  }
+
+  .emailBtn{
+    margin-top:19px;
+    &::part(native){
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  //:root {
+  //  direction: rtl !important;
+  //}
+  //
+  ////
+  ion-menu {
+    transform: rotate(180deg);
+    ion-content{
+      transform: rotate(180deg);
+    }
+
+
+  }
+
+  //
+  //  :root {
+  //    -webkit-animation: none;
+  //    --animate-duration: 1s;
+  //    --animate-delay: 1s;
+  //    --animate-repeat: 1;
+  //  }
+  //  //display: flex;
+  //  //flex-direction: row-reverse;
+  //  //direction: ltr;
+  //  &::part(container){
+  //    left: -9999px;
+  //    transition:0.3s;
+  //  }
+  //}
+  //.show-menu{
+  //  &::part(container){
+  //
+  //    transition:0.3s;
+  //    left: 10px;
+  //  }
+  //}
+
+  .satrexTabPanel {
+    direction: rtl;
+  }
+
+  direction: ltr;
+
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  div,
+  th, td,
+  button, .mbsc-button,
+  label, ion-button::part(native), ion-select::part(text) {
+    font-family: HelveticaLt !important;
+    letter-spacing: 0px;
+  }
+
+  .alert-radio-icon {
+    left: 26px !important;
+    right: unset !important;
+  }
+
+  .selectArrow{
+    top: 34px;
+    right:14px;
+  }
+
+  .row {
+    flex-direction: row-reverse;
+    direction: rtl;
+    text-align: left;
+  }
+
+  .swiper-slide {
+    padding-right: 17px;
+  }
+
+  .personalInfoDatePickerBtn {
+    cursor: pointer;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 31px;
+    right: 9px;
+  }
+
+
+  .MuiMenu-paper {
+    left: initial !important;
+    right: 0 !important;
+  }
+
+  .homeCircle {
+    position: fixed;
+    top: -100px;
+    right: 100px;
+    z-index: 1;
+    border-radius: 64vh;
+    width: 64vh;
+    height: 64vh;
+    background-image: radial-gradient(#2b8f9e 5%, #2b8f9e 20%, #0a1940 70%);
+  }
+
+  ion-tab-bar {
+    position: absolute;
+    width: 100%;
+    min-height: 67px;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 20;
+    background-color: transparent;
+    padding-bottom: 15px;
+    border: none;
+
+    #tab-button-setting {
+      border-top-left-radius: 35px;
+      border-bottom-left-radius: 35px;
+
+    }
+
+    #tab-button-profile {
+      border-top-right-radius: 35px;
+      border-bottom-right-radius: 35px;
+    }
+  }
+
+  input, .searchbar-input {
+    text-align: left;
+
+    &::placeholder {
+      text-align: left;
+    }
+  }
+
+  .MuiTabs-flexContainer {
+    direction: ltr !important;
+  }
+}

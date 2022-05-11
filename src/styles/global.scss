@@ -1,0 +1,1597 @@
+@import "./colors";
+
+@font-face {
+  font-family: YekanRegular;
+  src: url("../fonts/font-ir/iranyekanwebregular(fanum).ttf") format('truetype');
+}
+
+@font-face {
+  font-family: BYekan;
+  src: url("../fonts/B_Yekan/Yekan.ttf");
+  font-display: swap;
+}
+
+.commentDiv {
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px !important;
+}
+
+
+.greenBox {
+  background-color: rgba($satrexGreen, 0.1);
+}
+
+.blueBox {
+  background-color: rgba(lightblue, 0.2);
+}
+
+//[dir="rtl"]{
+//  ion-menu[side=start] > &::part(container){
+//    right: 0;
+//    direction: ltr;
+//  }
+//
+//  ion-menu[side=start] ion-icon[aria-label^="arrow"]::before, ion-icon[flip-rtl]::before {
+//    -webkit-transform: scaleX(1);
+//    transform: scaleX(1);
+//    margin-left: 8px;
+//  }
+//}
+//
+
+@import "./ltrApp";
+@import "./rtlApp";
+
+
+body {
+  --ion-color-primary: rgb(2, 181, 160);
+}
+
+
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+th, td,
+button, .mbsc-button,
+label, ion-button::part(native), ion-select::part(text) {
+  font-family: YekanRegular !important;
+  letter-spacing: 0px;
+}
+
+ion-toast::part(message) {
+  font-size: 12px;
+  font-family: YekanRegular !important;
+  letter-spacing: 0px;
+}
+
+td, th {
+  font-size: 9px !important;
+  color: $satrexGray !important;
+  border: none !important;
+}
+
+thead {
+  th, td {
+    color: #b0b0b0 !important;
+  }
+}
+
+span,
+p,
+a,
+div,
+label {
+  font-size: 11px;
+  color: $satrexGray;
+}
+
+ion-input {
+  font-family: YekanRegular !important;
+}
+
+
+.mbsc-scroller-wheel-group-cont {
+  background-color: white;
+}
+
+ion-tab-button {
+  background-color: #f5f5f5 !important;
+
+  &::before {
+    background-color: transparent;
+    display: block;
+    content: "";
+    margin: 0 auto;
+    width: 20px;
+    height: 2px;
+  }
+
+  &.tab-selected::before {
+  }
+}
+
+ion-item.selected {
+  --background: rgba(2, 181, 160, 0.06) !important;
+  color: $satrexGreen;
+
+  ion-icon {
+    color: $satrexGreen !important;
+  }
+
+  &:hover {
+    --background: rgba(2, 181, 160, 0.06) !important;
+    color: $satrexGreen;
+  }
+}
+
+ion-toolbar {
+  height: 44px;
+}
+
+.toolbar {
+  background-image: linear-gradient(to right, #30a3b4, #0a1940);
+}
+
+.homeToolbar {
+  background-color: transparent;
+
+  .guideButton {
+    color: #2988ff !important;
+    font-size: 25px;
+  }
+
+  ion-title,
+  ion-icon {
+    color: black !important;
+  }
+
+}
+
+.header-md::after {
+  background-image: unset;
+}
+
+:host > * {
+  height: 40px;
+  min-height: unset;
+}
+
+ion-title {
+  color: white;
+}
+
+ion-menu-button {
+  color: white;
+  height: 44px;
+}
+
+ion-toolbar {
+  --min-height: 40px !important;
+}
+
+ion-tab-button {
+  &::before {
+    height: 0;
+  }
+}
+
+.mainPageContainer {
+  ion-card {
+    box-shadow: 0px 6px 5px 0px #65656542 !important;
+    border-radius: 30px;
+  }
+
+
+  //display: flex;
+  //flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: auto;
+  padding: 0px 9px 45px;
+
+}
+
+.row {
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ion-searchbar {
+  margin-top: 50px;
+  padding: 19px !important;
+
+  input {
+    border-radius: 20px !important;
+    box-shadow: 0px 1px 9px 0px #65656542 !important;
+
+    &::placeholder {
+      text-align: right;
+      font-size: 11px;
+    }
+  }
+
+  .searchbar-clear-button {
+    right: 13px !important;
+  }
+
+  .searchbar-search-icon {
+    left: 13px !important;
+    right: unset !important;
+  }
+}
+
+.sharedSearchBar {
+  margin-top: 0;
+  padding: 0 !important;
+
+  input {
+    border-radius: 0 !important;
+    box-shadow: unset !important;
+
+    &::placeholder {
+      text-align: right;
+      font-size: 11px;
+    }
+  }
+
+  .searchbar-clear-button {
+    right: 13px !important;
+  }
+
+  .searchbar-search-icon {
+    left: 13px !important;
+    right: unset !important;
+  }
+}
+
+ion-label {
+  font-size: 10px;
+}
+
+.tab-selected {
+  --color-selected: red;
+
+  ion-label {
+    color: black !important;
+  }
+}
+
+.tab-has-icon {
+  &:hover {
+    --color-selected: red;
+  }
+}
+
+ion-tab-bar {
+  padding: 0 !important;
+  bottom: 10px !important;
+  width: calc(100% - 37px) !important;
+  right: 19px;
+  border-radius: 35px;
+  box-shadow: 0 0 4px 2px #8b8b8b57;
+}
+
+.GradientsButton {
+  margin: 0;
+
+  &::part(native) {
+    background-image: linear-gradient(to right, #1f5d65, #02b5a0);
+    box-shadow: none;
+    color: white;
+
+
+    span {
+      color: white;
+    }
+  }
+
+}
+
+.grayButton {
+  &::part(native) {
+    background-image: linear-gradient(to right, #969696, #d5d5d5);
+    box-shadow: none;
+    color: white;
+
+
+    span {
+      color: white;
+    }
+  }
+}
+
+.GradientsRedButton {
+  margin: 0;
+
+  &::part(native) {
+    background-image: linear-gradient(to right, #3b1d1d, #ff0000);
+
+    color: white;
+
+    span {
+      color: white;
+    }
+  }
+}
+
+.mbsc-scroller-wheel-item {
+  div {
+    display: none;
+  }
+
+  text-align: center !important;
+}
+
+.mbsc-ios.mbsc-datepicker-inline {
+  width: 100%;
+}
+
+.satrexInput {
+  margin-top: 5px;
+  outline: none !important;
+  border-radius: 3px;
+  min-height: 40px;
+  position: relative;
+  border: 1px solid #ced4da;
+  transition: 0.3s;
+  font-size: 12px;
+  height: 35px;
+  width: 100%;
+  padding: 10px 12px;
+
+  &:focus {
+    box-shadow: rgba($satrexGreen, 0.25) 0 0 0 0.2rem;
+    border-color: rgba($satrexGreen, 0.75) !important;
+  }
+;
+}
+
+.satrexTextArea {
+  min-height: 130px;
+  margin-top: 5px;
+  outline: none !important;
+  border-radius: 3px;
+  position: relative;
+  border: 1px solid #ced4da;
+  transition: 0.3s;
+  font-size: 12px;
+  width: 100%;
+  padding: 10px 12px;
+
+  &:focus {
+    box-shadow: rgba($satrexGreen, 0.25) 0 0 0 0.2rem;
+    border-color: rgba($satrexGreen, 0.75) !important;
+  }
+;
+}
+
+
+ion-router-outlet {
+  ion-content {
+    overflow: hidden;
+  }
+}
+
+ion-header {
+  display: unset;
+  min-height: 45px;
+  position: fixed;
+}
+
+.gradientDiv {
+  background-image: linear-gradient(transparent, transparent, rgba(3, 194, 172, 0.13));
+}
+
+.datePickerDiv {
+  --max-height: 40%;
+  align-items: flex-end;
+}
+
+.linkButton::part(native) {
+  border: none
+}
+
+.installPwaAlert {
+  display: none;
+
+  .alert-button-group {
+    direction: ltr;
+  }
+}
+
+.logoText {
+  margin-top: 8%;
+  left: 27%;
+  position: absolute;
+  width: 45%;
+}
+
+
+img {
+  max-width: unset !important;
+}
+
+.window {
+  transform: rotate(-10deg);
+  position: relative;
+  right: 29%;
+  width: 100%;
+}
+
+ion-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.topShadowDiv {
+  z-index: 4;
+
+  img {
+    margin-top: -24.5%;
+    width: 120%;
+    position: relative;
+    right: 20.5%;
+  }
+}
+
+.bottomShadowDiv {
+  z-index: 4;
+
+  img {
+    margin-top: 175%;
+    position: relative;
+    width: 168%;
+    transform: rotate(-10deg);
+    left: 34%;
+  }
+}
+
+.footerCandle {
+
+  position: fixed;
+  bottom: 0px;
+  direction: rtl;
+  width: 100%;
+  z-index: 2;
+}
+
+.sessionContent {
+  transition: 0.7s;
+  position: fixed;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+  padding: 10%;
+  z-index: 7;
+
+  .divInput {
+    height: 10vh;
+    min-height: 70px;
+  }
+}
+
+.sessionInputStyle {
+  input {
+    &::placeholder {
+      text-align: center;
+    }
+
+  }
+}
+
+.sessionInput {
+  margin-top: 20px;
+  --background: transparent !important;
+  --highlight-background: #7e86a6;
+  transition: 0.3s;
+  //border-bottom: white 3px solid;
+  --full-highlight-height: 1px;
+
+  ion-input {
+    color: white !important;
+    text-align: center;
+  }
+}
+
+.item-has-focus {
+  --highlight-background: blue;
+  //border-bottom: white 3px solid;
+  --full-highlight-height: 2px;
+}
+
+.candleShadow {
+  background-image: radial-gradient(rgba(0, 0, 0, 0) 45%, rgba(0, 5, 47, 0) 15%, #030f2e 70%);
+  z-index: 3;
+  width: 100%;
+}
+
+.sessionButton {
+  margin-top: 30px;
+
+  &::part(native) {
+    background: $satrexGreen;
+    border-radius: 30px;
+    min-height: 40px;
+  }
+
+  width: 100%;
+
+}
+
+.Toastify__toast {
+  border-radius: 10px !important;
+  margin: 5px;
+  min-height: 50px !important;
+}
+
+.Toastify__toast--success {
+  background: #e8ffe8 !important;
+}
+
+.Toastify__toast--error {
+  background: #ffe8e8 !important;
+}
+
+ion-content {
+  --background: #e9e9f1;
+  //top: 44px;
+  --offset-top: 0px;
+
+  &::part(scroll) {
+    padding-right: 0px
+  }
+}
+
+body {
+  background: #e9e9f1 !important;
+}
+
+.navItem {
+  &::part(native) {
+    padding: 4px 21px 4px 4px !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+    --background-hover: transparent;
+    --background: rgba(2, 181, 160, 0.06) !important;
+  }
+}
+
+ion-title {
+  padding-right: 0;
+  margin-top: -4px;
+}
+
+
+.swiper-pagination-bullets {
+  bottom: 0px !important;
+  z-index: 2
+}
+
+.swiper-container {
+  //padding-bottom: 10px !important;
+  height: 100%;
+
+  .swiper-slide {
+    height: 100%;
+
+    img {
+      max-width: 55px !important;
+    }
+  }
+}
+
+
+.satrexTextDiv {
+  position: absolute;
+  bottom: 60px;
+  padding: 20px;
+  z-index: -1;
+}
+
+.section {
+  min-height: 45px;
+  margin-top: 4px;
+  overflow: hidden;
+
+  background-color: white !important;
+  border: {
+    top: 1px solid #e5e5ea;
+    bottom: 1px solid #e5e5ea;
+  }
+}
+
+@keyframes comeUp {
+  //from,
+  //60%,
+  //75%,
+  //90%,
+  //to {
+  //  -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  //  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  //}
+
+  from {
+    //opacity: 0;
+    -webkit-transform: translate(0, 3000px);
+    transform: translate(0, 3000px);
+  }
+  //
+  //60% {
+  //  opacity: 1;
+  //  -webkit-transform: translate3d(0, -20px, 0) scaleY(0.9);
+  //  transform: translate3d(0, -20px, 0) scaleY(0.9);
+  //}
+  //
+  //75% {
+  //  -webkit-transform: translate3d(0, 10px, 0) scaleY(0.95);
+  //  transform: translate3d(0, 10px, 0) scaleY(0.95);
+  //}
+
+  //90% {
+  //  -webkit-transform: translate3d(0, -5px, 0) scaleY(0.985);
+  //  transform: translate3d(0, -5px, 0) scaleY(0.985);
+  //}
+
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+ion-button::part(native) {
+  flex-flow: column !important;
+
+  button {
+    .button-inner {
+      flex-flow: column !important;
+    }
+  }
+
+  span {
+    flex-flow: column !important;
+  }
+}
+
+.transparentButton::part(native) {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 3px;
+  padding: 0px;
+}
+
+.btnContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    font-size: 9px;
+  }
+}
+
+.bankSection {
+  background-color: #f4f4f4;
+}
+
+.selectedTransparentButton::part(native) {
+  background: #f3f3f3;
+  box-shadow: none;
+  border-radius: 3px;
+  padding: 0px;
+}
+
+.bankLogoDiv {
+  background-color: white;
+}
+
+.animateComeUp {
+  -webkit-animation-name: comeUp !important;
+  animation-duration: 0.2s !important;
+  animation-name: comeUp !important;
+}
+
+.fadeGradientBtn {
+  text-align: center !important;
+  transition: 0.3s;
+
+  &:hover {
+    background-image: linear-gradient(transparent, #e4f7f5);
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $satrexGreen !important;
+}
+
+.bankAccountRow {
+  &:hover {
+    background-color: #eaeaea !important;
+  }
+}
+
+.rstra-actions-container {
+  direction: ltr;
+}
+
+.persian-datepicker-column-item-content {
+  font-size: 14px;
+}
+
+.profileViewStyle {
+  width:100%;
+  overflow: auto;
+
+  div {
+    height: 100%;
+  }
+}
+
+[data-swipeable="true"]{
+  display:flex;
+  flex-direction: column;
+}
+//
+.react-swipeable-view-container {
+  height: 100%;
+
+  div {
+    height: auto;
+  }
+}
+
+
+.hSXIrp {
+  height: 100% !important;
+}
+
+.actionStyle {
+  height: 100%;
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.rstra-container {
+  height: 65px !important;
+
+}
+
+.favoritMarketRow {
+  cursor: pointer;
+  height: 100%;
+
+  &::part(native) {
+    height: 100%;
+  }
+}
+
+#delete-container {
+  height: 65px !important;
+}
+
+.marketListTable {
+  tr:nth-of-type(odd) {
+    background: transparent !important;
+  }
+
+  td, th {
+    padding: 9px !important;
+    font-size: 12px !important;
+    span{
+      font-size: 12px !important;
+    }
+    .valueSymbol{
+      font-size: 8px !important;
+    }
+    &:first-child {
+      text-align: right !important;
+    }
+    &:last-child {
+      text-align: left !important;
+    }
+  }
+}
+
+.marketDealBuyButton::part(native) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: unset !important;
+}
+
+.marketDealSellButton::part(native) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: unset !important;
+}
+
+.marketDealDisableButton::part(native) {
+  background: transparent !important;
+  border: 1px solid $satrexSemiGray !important;
+  color: $satrexSemiLightGray !important;
+}
+
+.volumeContainer {
+  background-color: rgba($satrexRed, 0.2);
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 20px;
+}
+
+.volumeBuyContainer {
+  background-color: rgba($satrexGreen, 0.2);
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 20px;
+}
+
+.satrexHr {
+  border-top: 1px solid #d7d8da;
+  width: 100%;
+}
+
+.successBtn {
+  height: 27px;
+
+  &::part(native) {
+    border-radius: 8px;
+    background-color: $satrexGreen;
+    color: $satrexSemiGray;
+    font-size: 15px;
+  }
+}
+
+.transparentGreenButton {
+  margin: 0;
+  height: 27px;
+
+  &::part(native) {
+    box-shadow: unset !important;
+    border: 1px solid $satrexSemiGray;
+    border-radius: 8px;
+    background-color: transparent;
+    color: $satrexGreen;
+    font-size: 10px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(161, 161, 161);
+  border-radius: 5px;
+}
+
+.MuiTabs-scroller::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 42px);
+}
+
+.depositDiv {
+  background-color: rgba($satrexRed, 0.05);
+
+  label {
+    color: $satrexRed;
+  }
+
+  border-radius: 8px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.purpleButton {
+
+  width: fit-content;
+
+  &::part(native) {
+    background-color: $satrexPurple;
+    box-shadow: unset !important;
+  }
+}
+
+.bankAccountsAlert {
+  .alert-wrapper {
+    max-width: 400px;
+    width: 400px;
+  }
+}
+
+input {
+  min-height: 40px;
+}
+
+.Toastify__toast {
+  --toastify-toast-min-height: 40px;
+  height: 40px;
+
+  .Toastify__toast-body {
+    padding: 0px;
+  }
+}
+
+.secretCodeInput {
+  input {
+    letter-spacing: 3px;
+
+    &::placeholder {
+      letter-spacing: 0.5px
+    }
+  }
+}
+
+.MuiTabs-flexContainer {
+  height: 100% !important;
+}
+
+.satrexTab {
+  padding: {
+    top: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+  }
+
+  span {
+    font-size: 12px;
+  }
+}
+
+.bankRowStyle {
+  input {
+    color: $satrexGray !important;
+    font-size: 12px !important;
+
+    &::placeholder {
+      color: black !important
+    }
+  }
+
+  &::before {
+    border-bottom: 1px solid $satrexSemiGray !important;
+  }
+
+
+}
+
+
+.persian-datepicker-sheet-footer__submit {
+  background: transparent !important;
+  border: 1px solid $satrexGreen !important;
+  height: 38px !important;
+  color: $satrexGreen !important;
+
+  &:hover {
+    background: $satrexGreen !important;
+    color: white !important;
+  }
+}
+
+.persian-datepicker-sheet-footer__cancel {
+  background: transparent !important;
+  border: 1px solid $satrexGray !important;
+  height: 38px !important;
+  color: $satrexGray !important;
+
+  &:hover {
+    background: $satrexGray !important;
+    color: white !important;
+  }
+}
+
+.withdrawalMoneyBankSelect {
+  .picker-opt {
+    font-size: 15px !important;
+  }
+}
+
+.sessionContent {
+  .MuiInput-underline::before {
+    border-bottom: 1px solid $satrexGray;
+  }
+}
+
+.extraPage {
+  p, li, div {
+    font-size: 14px !important;
+  }
+}
+
+.MuiButton-endIcon {
+  margin-left: 0 !important;
+}
+
+.bankInfoButtonsDiv {
+  border: {
+    bottom: 1px solid #dfdfdf;
+    top: 1px solid #dfdfdf;
+  }
+}
+
+
+.rmc-picker-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rmc-column-item-content {
+  font-size: 17px !important;
+}
+
+.tabbarShadow {
+  width: 100%;
+  position: absolute;
+  border-radius: 35px;
+  margin: {
+    left: 18px;
+    right: 18px;
+  }
+}
+
+ion-fab {
+  bottom: 110px;
+  left: 0px;
+  width: fit-content;
+
+  ion-fab-button::part(native) {
+    background: transparent;
+    height: 35px;
+    width: 35px;
+    box-shadow: none;
+  }
+}
+
+#___reactour {
+  div {
+    color: rgba(0, 0, 0, 0.45) !important;
+  }
+}
+
+.guideButton {
+  color: #2988ff !important;
+  font-size: 25px;
+}
+
+.blackTourBtn {
+  color: black !important;
+  font-size: 25px;
+}
+
+.whiteTourBtn {
+  color: white !important;
+  font-size: 25px;
+}
+
+[data-tour-elem="controls"] {
+  direction: ltr;
+}
+
+.satrexTabs {
+  min-height: 10px !important;
+}
+
+ion-refresher {
+  z-index: 1000 !important;
+}
+
+
+.MuiTooltip-tooltip {
+  color: white;
+
+  span {
+    color: white;
+  }
+}
+
+ion-slides {
+  height: 100%;
+
+  .swiper-slide {
+    height: 100%
+  }
+
+}
+
+.introSlider {
+  .swiper-container {
+    background-color: white;
+  }
+
+  ion-slide {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      text-align: center;
+
+      font-size: 15px;
+      line-height: 2.5em;
+      margin-bottom: 70px;
+    }
+
+    padding: 30px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+.animationDiv {
+  //svg{
+  //  transform:scale(.5) !important;
+  //  width:500px !important;
+  //}
+}
+
+.RSPBstep {
+  position: unset !important;
+  left: unset !important;
+  transform: unset !important;
+  overflow: hidden;
+  .stepDiv{
+    background-color:white
+  }
+}
+
+.personalInfoView {
+  div {
+    width: 100%
+  }
+}
+
+.RSPBprogressBar {
+  display: flex !important;
+  flex-direction: row-reverse;
+  justify-content: space-between !important;
+}
+
+.stepDiv {
+  border-radius: 5px !important;
+  width: 80px;
+  display: flex;
+  border: solid 1px $borderColor;
+  height: 50px;
+  background: transparent;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+  //width:fit-content;
+  padding: 6px;
+
+  svg {
+    color: #c9c9c9 !important;
+  }
+
+  .subtitle {
+    //bottom: 56px;
+    div {
+      color: #c2c2c2;
+      font-size: 8px;
+    }
+
+    position: relative;
+    white-space: nowrap;
+
+    display: flex;
+
+  }
+}
+
+.RSPBprogressBar {
+  height: 1px !important;
+}
+
+.reactedStep {
+  background: $satrexGreen !important;
+  border: solid 1px $satrexGreen;
+  box-sizing: border-box;
+
+  .subtitle {
+    div {
+      color: white;
+      border-color: white !important;
+    }
+  }
+
+  svg {
+    color: black !important;
+  }
+}
+
+.currentStep {
+  border: none !important;
+}
+
+.MuiAlert-standardSuccess {
+  background-color: rgba($satrexGreen, 0.1) !important;
+
+  .MuiAlert-message {
+    line-height:20px;
+    color: $satrexGreen;
+    position: relative;
+    top: 1px;
+  }
+
+}
+
+.MuiAlert-standardInfo  {
+  background-color: rgba(0, 188, 236, 0.1) !important;
+
+  .MuiAlert-message {
+    line-height:20px;
+    color: rgb(0, 188, 236);
+    position: relative;
+    top: 1px;
+  }
+
+}
+.MuiAlert-standardError  {
+  background-color: rgba(236, 0, 0, 0.2) !important;
+
+  .MuiAlert-message,svg {
+    line-height:20px;
+    color: red;
+    position: relative;
+    top: 1px;
+  }
+
+}
+
+.MuiAlert-icon {
+  color: $satrexGreen !important;
+  width: 15px !important;
+}
+
+.RSPBprogression {
+  display: none;
+}
+
+input::placeholder {
+  color: #d5d5d5 !important
+}
+
+.picker-wrapper {
+  border: {
+    top-left-radius: 20px !important;
+    top-right-radius: 20px !important;
+  }
+  max-height: 200px !important;
+
+  .picker-toolbar {
+    //position: absolute;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #030f2e inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #fff;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px #030f2e inset; /*your box-shadow*/
+  -webkit-text-fill-color: #fff;
+}
+
+.swiper-button-next {
+  display: none !important;
+}
+
+.swiper-button-prev {
+  display: none !important;
+}
+
+.stickUpDown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.walletDetailTitle {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 80px;
+  }
+}
+
+.walletDetailInformationRow {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 15px;
+    line-height: 2;
+  }
+}
+
+
+.ion-page {
+  contain: unset !important;
+}
+
+.orderQueueCell {
+  font-family: BYekan !important;
+  width: 40%;
+  position: relative;
+  top: 3px;
+  font-size: 11px;
+  z-index: 4;
+
+  &:last-child {
+    width: 20%;
+  }
+}
+
+.sliderTexts {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
+  min-height: 20.9px
+}
+
+.column {
+  flex-flow: column;
+}
+
+.center {
+  justify-content: center;
+}
+
+.middle {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.paginationBtns {
+  //margin-top: 10px;
+  margin: {
+    top: 10px;
+    bottom: 10px;
+  }
+
+  * {
+    font-size: 11px !important
+  }
+
+  button {
+    width: 25px;
+    height: 25px;
+    min-width: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .MuiPaginationItem-previousNext {
+    svg {
+      font-size: 10px !important
+    }
+  }
+
+  .Mui-selected {
+    background-color: $satrexGreen !important;
+    border-radius:50%;
+  }
+
+  .MuiPaginationItem-firstLast {
+    svg {
+      font-size: 13px !important
+    }
+  }
+}
+
+.captchaBackground {
+  display: flex;
+  justify-content: center;
+
+  * {
+    font-size: 15px;
+  }
+}
+
+
+.mt-15 {
+  margin-top: 15px
+}
+
+.mt-10 {
+  margin-top: 10px
+}
+
+.mt-5 {
+  margin-top: 5px
+}
+
+.textCenter {
+  text-align: center
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.resetPasswordPage {
+  span {
+    color: white;
+
+  }
+}
+
+//.react-swipeable-view-container{
+//  direction:unset !important;
+//}
+
+
+tr {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  min-height: 40px;
+  height: 40px;
+}
+
+td, th {
+  width: 10px !important;
+  min-width: 10px !important;
+  max-width: 10px !important;
+  padding: {
+    left: 2px !important;
+    right: 2px !important;
+  }
+}
+
+.rounded-9 {
+  border-radius: 9px;
+}
+
+.bankInfoStyle {
+  position: relative;
+  top: -5px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.saveButtonInEditPersonalInfo {
+  top: 10px;
+  left: 10px;
+
+  button {
+    border: solid 1px gray;
+    border-radius: 8px;
+  }
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height{
+  height:100%;
+}
+
+.menuLeftRadius {
+  &::part(container){
+    border-top-left-radius:20px;
+  }
+
+  &::part(container){
+    border-bottom-left-radius:20px;
+  }
+}
+.menuRightRadius {
+  &::part(container){
+    border-top-right-radius:20px;
+  }
+
+  &::part(container){
+    border-bottom-right-radius:20px;
+  }
+}
+
+
+.remainedHeight{
+  flex: 1 1 auto;
+}
+
+.overflowAuto{
+  overflow: auto;
+}
+
+.pageBottomArea{
+  padding-bottom: 70px;
+}
+
+.progressViewContainer{
+  width:90%;
+  direction:rtl;
+  padding-top:30px;
+}
+
+.ltr{
+  direction : ltr;
+}
+
+:root {
+  --bg-color: rgb(243,243,243);
+}
+
+[data-theme="dark"] {
+  --bg-color: white;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background: var(--bg-color)
+  }
+}
+
+.menuItemDivider{
+  border-top: 1px solid #d7d8da;
+  width: 92%;
+}
+
+.loaderStyles{
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

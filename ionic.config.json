@@ -1,0 +1,7 @@
+{
+  "name": "Satrex-Pwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
